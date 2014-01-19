@@ -1,0 +1,17 @@
+#- name: Install list of packages
+#  action: apt pkg={{item}} state=installed
+#  with_items:
+#  - build-essential
+
+- name: Install Libevent Core
+  action: apt pkg=libevent-core-2.0-5 state=installed
+
+- name: Install Libevent Extra
+  action: apt pkg=libevent-extra-2.0-5  state=installed
+
+- name: Add ori ppa
+  apt_repository: repo='ppa:ezyang/ppa'
+
+- name: Install Ori
+  action: apt pkg=ori state=installed update_cache=yes
+
