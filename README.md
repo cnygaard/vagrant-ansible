@@ -27,19 +27,19 @@ ori Usage:
 	$ cd ori
 
 	Start the Vagrant machine
-	$ vagrant up
+	ori $ vagrant up
 
 	SSH into the Vagrant box
-	$ vagrant ssh
+	ori $ vagrant ssh
 
 	In the Vagrant virtual machine
 
 	Create new ori file system
-	$ orifs new test
+	$ ori newfs test
 
 	Create mount point directory
 	$ mkdir test
 
  	Mount the file system	
-	$ ori test
+	$ orifs test
 
