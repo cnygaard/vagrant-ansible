@@ -26,20 +26,29 @@ ori Usage:
 	On your host machine
 	$ cd ori
 
-	Start the Vagrant machine
+	Start the Vagrant machines ori1 & ori2
 	ori $ vagrant up
 
-	SSH into the Vagrant box
-	ori $ vagrant ssh
+	SSH into the Vagrant box ori1
+	ori $ vagrant ssh ori1
 
-	In the Vagrant virtual machine
+	In the ori1 Vagrant virtual machine
+	-----------------------------------
 
 	Create new ori file system
-	$ ori newfs test
+	ori1$ ori newfs test
 
 	Create mount point directory
-	$ mkdir test
+	ori1$ mkdir test
 
  	Mount the file system	
-	$ orifs test
+	ori1$ orifs test
 
+	In the ori2 Vagrant virtual machine
+        -----------------------------------
+
+	ori2$ ori replicate --shallow vagrant@192.168.111.222:test
+	ori2$ mkdir test
+	ori2$ orifs test
+
+	
