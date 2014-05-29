@@ -1,0 +1,12 @@
+- name: Install HTTP
+  action: yum pkg=httpd
+  notify:
+  - restart httpd 
+
+- name: Python pip
+  action: yum pkg=python-pip
+
+- name: Django 1.7
+  #command: pip install https://www.djangoproject.com/download/1.7.b4/tarball/
+  action: pip name=https://www.djangoproject.com/download/1.7.b4/tarball/
+ 
